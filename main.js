@@ -7,6 +7,14 @@ let deleteAllBtn = document.querySelector(".clear-all");
 let popUpAlert = document.querySelector(".alert");
 let popUpAlertCloseBtn = document.querySelector(".pop-up");
 
+// Clear all from the Local Storage
+deleteAllBtn.onclick = () => {
+    window.location.reload();
+    window.localStorage.clear();
+    resultDiv.innerHTML = "";
+    doneDiv.innerHTML = "";
+};
+
 // Create an empty array to store the tasks
 let arrayOfTasks = [];
 
@@ -115,10 +123,3 @@ const getElementsFromTheLocalStorage = () => {
 };
 
 getElementsFromTheLocalStorage();
-
-// Clear all from the Local Storage
-deleteAllBtn.onclick = () => {
-    window.localStorage.clear();
-    resultDiv.innerHTML = "";
-    doneDiv.innerHTML = "";
-};
