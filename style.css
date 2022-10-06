@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    background-color: #f6f6f6;
+    position: relative;
+    left: 50%;
+    top: 330px;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.alert p {
+    text-align: center;
+    line-height: 300px;
+    font-size: 20px;
+    color: red;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 330px;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.alert span {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -12.5px;
+    top: -12.5px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: tomato;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.form,
+.tasks,
+.done {
+    background-color: #eee;
+    padding: 20px;
+    margin: 50px auto;
+    width: 600px;
+}
+
+[type="text"] {
+    width: 400px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+[type="text"]:focus {
+    outline: none;
+}
+
+[type="submit"] {
+    width: 100px;
+    height: 35px;
+    margin-left: 10px;
+    background-color: orangered;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.tasks div,
+.done div {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks div span,
+.done div span {
+    color: white;
+    background-color: red;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.done .old-task {
+    opacity: 0.5;
+    text-decoration: line-through;
+}
+
+.clear-all {
+    width: 200px;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    margin: 20px auto;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+}
